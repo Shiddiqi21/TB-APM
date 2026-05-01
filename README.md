@@ -1,4 +1,13 @@
-# SampahPedia 🌿
+---
+title: SampahPedia
+emoji: "\u267B\uFE0F"
+colorFrom: green
+colorTo: yellow
+sdk: docker
+pinned: false
+---
+
+# SampahPedia
 
 Sistem klasifikasi jenis sampah berbasis **Convolutional Neural Network (CNN)** menggunakan arsitektur **MobileNetV2** untuk mendukung proses pemilahan sampah pada **Bank Sampah Panca Daya 3 Padang**.
 
