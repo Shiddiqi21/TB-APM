@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deteksi Sampah — SampahPedia</title>
+<meta name="description" content="Upload foto sampah dan deteksi jenisnya menggunakan AI CNN SampahPedia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/deteksi.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="18" r="17" fill="rgba(122,198,53,0.15)" stroke="#7CC635" stroke-width="1.5"/>
+        <path d="M18 8C18 8 12 10 10 15C8 20 11 24 15 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 8C18 8 24 10 26 15C28 20 25 24 21 25" stroke="#1A6B3A" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15 25L18 28L21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="3" fill="#7CC635" opacity="0.8"/>
+      </svg>
+      <span class="logo-text"><span class="logo-sampah">Sampah</span><span class="logo-pedia">Pedia</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Beranda</a></li>
+      <li><a href="deteksi.html" class="nav-link active">Deteksi</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="dot-grid"></div>
+    <!-- Radar SVG -->
+    <div class="radar-wrap">
+      <svg class="radar-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="150" cy="150" r="130" stroke="rgba(122,198,53,0.12)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="100" stroke="rgba(122,198,53,0.15)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="70" stroke="rgba(122,198,53,0.18)" stroke-width="1"/>
+        <circle cx="150" cy="150" r="40" stroke="rgba(122,198,53,0.2)" stroke-width="1"/>
+        <line x1="150" y1="20" x2="150" y2="280" stroke="rgba(122,198,53,0.08)" stroke-width="1"/>
+        <line x1="20" y1="150" x2="280" y2="150" stroke="rgba(122,198,53,0.08)" stroke-width="1"/>
+        <path d="M150 150 L150 20 A130 130 0 0 1 280 150" fill="rgba(122,198,53,0.06)" class="radar-sweep"/>
+        <circle cx="150" cy="150" r="6" fill="rgba(122,198,53,0.6)"/>
+      </svg>
+    </div>
+  </div>
+  <div class="page-hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      🔍 AI Detection Active
+    </div>
+    <h1 class="page-title">Deteksi <span class="title-lime">Jenis Sampah</span></h1>
+  </div>
+</section>
+
+<!-- MAIN DETECTION -->
+<section class="detection-section">
+  <div class="detection-container">
+
+    <!-- MAIN CARD -->
+    <div class="detection-card reveal" id="detectionCard">
+
+      <!-- STEP INDICATOR -->
+      <div class="steps-wrap">
+        <div class="step active" id="step1">
+          <div class="step-circle">1</div>
+          <span class="step-label">Upload</span>
+        </div>
+        <div class="step-line" id="line12"></div>
+        <div class="step" id="step2">
+          <div class="step-circle">2</div>
+          <span class="step-label">Deteksi</span>
+        </div>
+        <div class="step-line" id="line23"></div>
+        <div class="step" id="step3">
+          <div class="step-circle">3</div>
+          <span class="step-label">Hasil</span>
+        </div>
+      </div>
+
+      <!-- UPLOAD ZONE -->
+      <div class="upload-zone" id="uploadZone">
+        <div class="upload-icon-wrap">
+          <svg class="upload-icon bounce-anim" width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M30 38V20M30 20L22 28M30 20L38 28" stroke="#7CC635" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 42H14C10.69 42 8 39.31 8 36C8 33.05 10.07 30.57 12.87 30.06C12.3 28.85 12 27.46 12 26C12 20.48 16.48 16 22 16C22.93 16 23.83 16.14 24.68 16.39C26.15 12.6 29.78 10 34 10C39.52 10 44 14.48 44 20C44 20.36 43.98 20.71 43.94 21.06C47.43 21.56 50 24.47 50 28C50 31.87 46.87 35 43 35H42" stroke="#7CC635" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 42H38" stroke="rgba(122,198,53,0.4)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="upload-main">Seret gambar ke sini</p>
+        <p class="upload-or">atau</p>
+        <label for="fileInput" class="btn-upload-file">Pilih dari Perangkat</label>
+        <input type="file" id="fileInput" accept="image/png,image/jpg,image/jpeg" hidden>
+        <p class="upload-note">PNG, JPG, JPEG — Maks. 5MB</p>
+      </div>
+
+      <!-- PREVIEW ZONE (hidden by default) -->
+      <div class="preview-zone" id="previewZone" style="display:none">
+        <div class="preview-img-wrap">
+          <img id="previewImg" src="" alt="Preview">
+          <button class="btn-remove-img" id="removeImg" title="Ganti Gambar">✕ Ganti</button>
+        </div>
+        <p class="preview-name" id="previewName"></p>
+      </div>
+
+      <!-- DETECT BUTTON -->
+      <button class="btn-detect" id="detectBtn" disabled>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        Analisis Sampah
+      </button>
+
+      <!-- LOADING STATE -->
+      <div class="loading-state" id="loadingState" style="display:none">
+        <div class="sonar-wrap">
+          <svg class="sonar-svg" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="80" stroke="rgba(122,198,53,0.15)" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="60" stroke="rgba(122,198,53,0.2)" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="40" stroke="rgba(122,198,53,0.25)" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="20" fill="rgba(122,198,53,0.3)"/>
+            <circle cx="100" cy="100" r="80" stroke="rgba(122,198,53,0.5)" stroke-width="2" class="sonar-ping"/>
+          </svg>
+        </div>
+        <p class="loading-text" id="loadingText">Memproses gambar...</p>
+      </div>
+
+      <!-- RESULT SECTION -->
+      <div class="result-section" id="resultSection" style="display:none">
+        <div class="result-card" id="resultCard">
+          <div class="result-accent-bar" id="resultAccent"></div>
+          <div class="result-top">
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-meta">
+              <span class="result-label-sm">Hasil Deteksi</span>
+              <div class="result-category" id="resultCategory"></div>
+              <div class="confidence-label">
+                <span>Tingkat Keyakinan</span>
+                <span class="confidence-val" id="confidenceVal">—</span>
+              </div>
+              <div class="confidence-bar-bg">
+                <div class="confidence-bar-fill" id="confidenceFill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-desc" id="resultDesc"></div>
+
+          <div class="result-badges" id="resultBadges"></div>
+
+          <!-- ALL PREDICTIONS BREAKDOWN -->
+          <div class="predictions-breakdown" id="predictionsBreakdown"></div>
+
+          <!-- HANDLING GUIDE -->
+          <div class="guide-accordion" id="guideAccordion">
+            <button class="guide-toggle" id="guideToggle">
+              <span>♻️ Cara Pengelolaan Sampah Ini</span>
+              <svg class="guide-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="guide-content" id="guideContent"></div>
+          </div>
+
+          <!-- REFERENCE IMAGES -->
+          <div class="ref-images-section">
+            <h4 class="ref-title">Gambar Referensi</h4>
+            <div class="ref-images-grid" id="refImagesGrid"></div>
+          </div>
+
+          <!-- ACTION BUTTONS -->
+          <div class="result-actions">
+            <button class="btn-action-outline" id="resetBtn">
+              🔄 Deteksi Ulang
+            </button>
+            <button class="btn-action-filled" id="copyBtn">
+              📋 Salin Hasil
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIPS SIDEBAR -->
+    <div class="tips-card reveal reveal-delay">
+      <h3 class="tips-title">💡 Tips Upload</h3>
+      <ul class="tips-list">
+        <li>Pastikan objek sampah terlihat jelas</li>
+        <li>Gunakan pencahayaan yang baik</li>
+        <li>Foto dari jarak dekat agar detail terlihat</li>
+        <li>Hindari foto yang blur atau buram</li>
+        <li>Satu foto = satu jenis sampah</li>
+      </ul>
+      <div class="tips-divider"></div>
+      <div class="tips-cats">
+        <p class="tips-cats-title">Kategori Terdeteksi:</p>
+        <div class="tips-cat-item"><span>🧴</span> Plastik</div>
+        <div class="tips-cat-item"><span>🍾</span> Kaca</div>
+        <div class="tips-cat-item"><span>🥫</span> Logam</div>
+        <div class="tips-cat-item"><span>📦</span> Kardus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo footer-logo">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" fill="rgba(122,198,53,0.15)" stroke="#7CC635" stroke-width="1.5"/>
+          <path d="M18 8C18 8 12 10 10 15C8 20 11 24 15 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 8C18 8 24 10 26 15C28 20 25 24 21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+          <path d="M15 25L18 28L21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="18" cy="18" r="3" fill="#7CC635" opacity="0.8"/>
+        </svg>
+        <span class="logo-text"><span class="logo-sampah">Sampah</span><span class="logo-pedia">Pedia</span></span>
+      </a>
+      <p class="footer-tagline">Pilah Cerdas, Bumi Bersih</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html" class="footer-link">Beranda</a>
+      <a href="deteksi.html" class="footer-link">Deteksi</a>
+      <a href="about.html" class="footer-link">About Us</a>
+    </nav>
+    <p class="footer-copy">© 2026 SampahPedia · Bank Sampah Panca Daya 3 Padang</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/deteksi.js"></script>
+</body>
+</html>
