@@ -145,7 +145,11 @@ uploadZone.addEventListener('drop',e=>{
   const f = e.dataTransfer.files[0];
   if(f && f.type.startsWith('image/')) showPreview(f);
 });
-uploadZone.addEventListener('click',()=>fileInput.click());
+uploadZone.addEventListener('click',(e)=>{
+  // Hindari double-trigger di iOS: label sudah trigger fileInput secara native
+  if(e.target.tagName === 'LABEL' || e.target.tagName === 'INPUT') return;
+  fileInput.click();
+});
 
 // Loading messages
 const loadMsgs = ['Memproses gambar...','Menganalisis pola...','Mendeteksi kategori...','Menyelesaikan analisis...'];

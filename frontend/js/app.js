@@ -27,6 +27,13 @@ if(navToggle && navLinks){
     navLinks.classList.toggle('open');
     navToggle.classList.toggle('open');
   });
+  // Close menu when a nav link is clicked (mobile)
+  navLinks.querySelectorAll('.nav-link').forEach(link=>{
+    link.addEventListener('click',()=>{
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+    });
+  });
 }
 
 // ===== INTERSECTION OBSERVER (REVEAL) =====
