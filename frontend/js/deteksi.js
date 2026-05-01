@@ -134,6 +134,15 @@ fileInput.addEventListener('change',e=>{
   if(f) showPreview(f);
 });
 
+// Camera input
+const cameraInput = document.getElementById('cameraInput');
+if(cameraInput){
+  cameraInput.addEventListener('change',e=>{
+    const f = e.target.files[0];
+    if(f) showPreview(f);
+  });
+}
+
 // Remove image
 removeImg.addEventListener('click', resetForm);
 

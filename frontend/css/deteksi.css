@@ -129,6 +129,12 @@
   margin-bottom:16px;
 }
 .btn-upload-file:hover{background:var(--green-primary);color:#fff}
+.btn-camera{border-color:#3B82F6;color:#3B82F6}
+.btn-camera:hover{background:#3B82F6;color:#fff}
+.upload-btns-row{
+  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:16px;
+}
 .upload-note{font-size:.78rem;color:rgba(0,0,0,.35)}
 
 /* PREVIEW */
