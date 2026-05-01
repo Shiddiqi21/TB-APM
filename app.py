@@ -4,10 +4,22 @@ Serves CNN model (MobileNetV2) for waste classification.
 """
 
 import os
+import logging
+
+# Suppress semua warning TensorFlow SEBELUM import
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 import numpy as np
 from flask import Flask, request, jsonify, send_from_directory
 from PIL import Image
 import io
+import tensorflow as tf
+
+# Suppress TF & absl logging
+tf.get_logger().setLevel('ERROR')
+logging.getLogger('absl').setLevel(logging.ERROR)
+logging.getLogger('werkzeug').setLevel(logging.WARNING)
 
 # ===== CONFIG =====
 MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model.h5')
@@ -16,20 +28,14 @@ MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model.h5'
 CLASS_NAMES = ['kardus', 'logam', 'plastik', 'kaca']
 
 IMG_SIZE = (224, 224)
-PORT = 5000
+PORT = int(os.environ.get('PORT', 7860))
 
 # ===== APP SETUP =====
 app = Flask(__name__, static_folder='frontend', static_url_path='')
 
 # ===== LOAD MODEL =====
 print("\n[SampahPedia] Memuat Model CNN...")
-import tensorflow as tf
-
-# Suppress TF warnings
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-tf.get_logger().setLevel('ERROR')
-
-model = tf.keras.models.load_model(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 print("[OK] Model berhasil dimuat!")
 print(f"   Input shape : {model.input_shape}")
 print(f"   Output kelas: {len(CLASS_NAMES)} ({', '.join(CLASS_NAMES)})")
