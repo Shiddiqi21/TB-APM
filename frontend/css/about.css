@@ -18,6 +18,7 @@
 }
 @keyframes spinSlow{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
 .about-hero-content{position:relative;z-index:1;padding:20px}
+.about-hero{z-index:0}
 
 .hero-group-badge{
   display:inline-flex;align-items:center;gap:8px;
