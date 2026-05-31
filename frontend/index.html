@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SampahPedia - Pilah Cerdas, Bumi Bersih</title>
+<meta name="description" content="Klasifikasi sampah cerdas menggunakan AI untuk Bank Sampah Panca Daya 3 Padang">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="17" fill="rgba(122,198,53,0.15)" stroke="#7CC635" stroke-width="1.5"/>
+        <path d="M18 8C18 8 12 10 10 15C8 20 11 24 15 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 8C18 8 24 10 26 15C28 20 25 24 21 25" stroke="#1A6B3A" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15 25L18 28L21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 13L12 10L15 9" stroke="#7CC635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 13L24 10L21 9" stroke="#1A6B3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="3" fill="#7CC635" opacity="0.8"/>
+      </svg>
+      <span class="logo-text"><span class="logo-sampah">Sampah</span><span class="logo-pedia">Pedia</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Beranda</a></li>
+      <li><a href="deteksi.html" class="nav-link">Deteksi</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <svg class="blob-bg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(300,300)">
+        <path d="M120,-157.6C152.7,-141.5,174.3,-102.6,179.8,-63C185.3,-23.4,174.8,17,158.2,52.5C141.6,88,119,118.5,89.4,140.2C59.7,161.9,23,174.8,-14.6,171.7C-52.2,168.5,-90.7,149.4,-119.8,122.1C-148.9,94.8,-168.7,59.4,-175.9,20.5C-183.1,-18.3,-177.7,-60.6,-157.2,-93.3C-136.7,-126,-101.2,-149.2,-65.5,-162.2C-29.8,-175.1,5.9,-177.9,40.6,-170.6C75.3,-163.3,87.3,-173.7,120,-157.6Z" fill="rgba(122,198,53,0.06)" class="blob-animate"/>
+      </g>
+    </svg>
+    <div class="dot-grid"></div>
+  </div>
+  <div class="hero-container">
+    <div class="hero-left reveal">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        🌿 Powered by CNN · AI
+      </div>
+      <h1 class="hero-title">
+        <span class="title-white">Klasifikasi Sampah</span>
+        <span class="title-white">Lebih Cerdas,</span>
+        <span class="title-lime">Lebih Hijau.</span>
+      </h1>
+      <p class="hero-sub">Unggah foto sampah, sistem akan mengenali jenisnya secara otomatis dan memberikan panduan pengelolaan yang tepat.</p>
+      <div class="hero-btns">
+        <a href="deteksi.html" class="btn-primary">Mulai Deteksi →</a>
+        <a href="#features" class="btn-secondary">Pelajari Lebih →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-label">Kategori Sampah</span>
+        </div>
+
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">Realtime</span>
+          <span class="stat-label">Deteksi</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right reveal reveal-delay">
+      <div class="hero-orb-wrap">
+        <div class="hero-glow"></div>
+        <div class="hero-circle-card">
+          <div class="bins-visual">
+            <div class="bin bin-blue" title="Plastik">
+              <span class="bin-icon">🧴</span>
+              <div class="bin-body" style="background:linear-gradient(180deg,#3B82F6,#1D4ED8)"></div>
+            </div>
+            <div class="bin bin-amber" title="Kardus">
+              <span class="bin-icon">📦</span>
+              <div class="bin-body" style="background:linear-gradient(180deg,#F59E0B,#D97706)"></div>
+            </div>
+            <div class="bin bin-green" title="Kaca">
+              <span class="bin-icon">🍾</span>
+              <div class="bin-body" style="background:linear-gradient(180deg,#10B981,#059669)"></div>
+            </div>
+            <div class="bin bin-gray" title="Logam">
+              <span class="bin-icon">🥫</span>
+              <div class="bin-body" style="background:linear-gradient(180deg,#6B7280,#374151)"></div>
+            </div>
+          </div>
+          <div class="bins-label">4 Kategori Sampah Terdeteksi</div>
+        </div>
+        <!-- Orbiting icons -->
+        <div class="orbit-wrap">
+          <div class="orbit-card orbit-1"><span>🧴</span><small>Plastik</small></div>
+          <div class="orbit-card orbit-2"><span>📦</span><small>Kardus</small></div>
+          <div class="orbit-card orbit-3"><span>🍾</span><small>Kaca</small></div>
+          <div class="orbit-card orbit-4"><span>🥫</span><small>Logam</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features" id="features">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Keunggulan</span>
+      <h2 class="section-title dark">Mengapa SampahPedia?</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:rgba(245,166,35,0.12);border-color:rgba(245,166,35,0.3)">
+          <span class="feature-icon">⚡</span>
+        </div>
+        <h3 class="feature-title">Deteksi Instan</h3>
+        <p class="feature-desc">Hasil identifikasi jenis sampah ditampilkan secara cepat hanya dari foto yang diunggah.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:rgba(122,198,53,0.12);border-color:rgba(122,198,53,0.3)">
+          <span class="feature-icon">🔬</span>
+        </div>
+        <h3 class="feature-title">Berbasis CNN</h3>
+        <p class="feature-desc">Sistem dibangun menggunakan metode Convolutional Neural Network yang dilatih dengan ribuan gambar sampah.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:rgba(59,130,246,0.12);border-color:rgba(59,130,246,0.3)">
+          <span class="feature-icon">📊</span>
+        </div>
+        <h3 class="feature-title">Hasil Terukur</h3>
+        <p class="feature-desc">Model telah melalui proses pengujian menggunakan dataset sampah terstandar sehingga hasilnya dapat diandalkan.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap" style="background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.3)">
+          <span class="feature-icon">♻️</span>
+        </div>
+        <h3 class="feature-title">Panduan Pengelolaan</h3>
+        <p class="feature-desc">Setiap hasil identifikasi dilengkapi informasi cara pengelolaan sampah yang tepat dan mudah dipahami.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES SECTION -->
+<section class="categories" id="categories">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag lime">Kategori</span>
+      <h2 class="section-title light">4 Kategori yang Kami Kenali</h2>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card reveal" style="--accent:#3B82F6">
+        <div class="cat-icon">🧴</div>
+        <div class="cat-name">PLASTIK</div>
+        <div class="cat-idn">Sampah Plastik</div>
+        <p class="cat-desc">Botol, kantong, kemasan plastik bekas pakai yang dapat didaur ulang menjadi produk baru.</p>
+        <div class="cat-line" style="background:#3B82F6"></div>
+      </div>
+      <div class="cat-card reveal" style="--accent:#06B6D4">
+        <div class="cat-icon">🍾</div>
+        <div class="cat-name">KACA</div>
+        <div class="cat-idn">Sampah Kaca</div>
+        <p class="cat-desc">Botol kaca, cermin, toples, dan benda berbahan kaca yang perlu penanganan khusus.</p>
+        <div class="cat-line" style="background:#06B6D4"></div>
+      </div>
+      <div class="cat-card reveal" style="--accent:#6B7280">
+        <div class="cat-icon">🥫</div>
+        <div class="cat-name">LOGAM</div>
+        <div class="cat-idn">Sampah Logam</div>
+        <p class="cat-desc">Kaleng, besi, aluminium, dan berbagai produk logam dengan nilai daur ulang tinggi.</p>
+        <div class="cat-line" style="background:#6B7280"></div>
+      </div>
+      <div class="cat-card reveal" style="--accent:#F59E0B">
+        <div class="cat-icon">📦</div>
+        <div class="cat-name">KARDUS</div>
+        <div class="cat-idn">Sampah Kardus</div>
+        <p class="cat-desc">Dus, karton, kertas tebal yang dapat diolah kembali menjadi produk kertas baru.</p>
+        <div class="cat-line" style="background:#F59E0B"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-content reveal">
+    <div class="cta-orb"></div>
+    <h2 class="cta-title">Siap Memilah Sampah dengan Lebih Cerdas?</h2>
+
+    <a href="deteksi.html" class="btn-cta">Coba Deteksi Sekarang</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo footer-logo">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" fill="rgba(122,198,53,0.15)" stroke="#7CC635" stroke-width="1.5"/>
+          <path d="M18 8C18 8 12 10 10 15C8 20 11 24 15 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 8C18 8 24 10 26 15C28 20 25 24 21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+          <path d="M15 25L18 28L21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="18" cy="18" r="3" fill="#7CC635" opacity="0.8"/>
+        </svg>
+        <span class="logo-text"><span class="logo-sampah">Sampah</span><span class="logo-pedia">Pedia</span></span>
+      </a>
+      <p class="footer-tagline">Pilah Cerdas, Bumi Bersih</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html" class="footer-link">Beranda</a>
+      <a href="deteksi.html" class="footer-link">Deteksi</a>
+      <a href="about.html" class="footer-link">About Us</a>
+    </nav>
+    <p class="footer-copy">© 2026 SampahPedia</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

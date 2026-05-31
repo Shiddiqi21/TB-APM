@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — SampahPedia</title>
+<meta name="description" content="Tentang SampahPedia — Sistem klasifikasi sampah berbasis CNN AI untuk Bank Sampah Panca Daya 3 Padang">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="18" r="17" fill="rgba(122,198,53,0.15)" stroke="#7CC635" stroke-width="1.5"/>
+        <path d="M18 8C18 8 12 10 10 15C8 20 11 24 15 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 8C18 8 24 10 26 15C28 20 25 24 21 25" stroke="#1A6B3A" stroke-width="2" stroke-linecap="round"/>
+        <path d="M15 25L18 28L21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="18" cy="18" r="3" fill="#7CC635" opacity="0.8"/>
+      </svg>
+      <span class="logo-text"><span class="logo-sampah">Sampah</span><span class="logo-pedia">Pedia</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Beranda</a></li>
+      <li><a href="deteksi.html" class="nav-link">Deteksi</a></li>
+      <li><a href="about.html" class="nav-link active">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+  <div class="about-hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="dot-grid"></div>
+    <!-- Large decorative recycle SVG -->
+    <svg class="recycle-deco" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 20 L120 55 L140 55 L100 20Z" fill="rgba(122,198,53,0.12)"/>
+      <path d="M100 20 L80 55 L60 55 L100 20Z" fill="rgba(122,198,53,0.08)"/>
+      <path d="M60 55 L20 120 L60 120 L80 85 L60 55Z" fill="rgba(122,198,53,0.10)"/>
+      <path d="M140 55 L180 120 L140 120 L120 85 L140 55Z" fill="rgba(122,198,53,0.08)"/>
+      <path d="M20 120 L60 120 L40 155 L20 120Z" fill="rgba(122,198,53,0.12)"/>
+      <path d="M180 120 L140 120 L160 155 L180 120Z" fill="rgba(122,198,53,0.10)"/>
+      <path d="M40 155 L160 155 L100 180 L40 155Z" fill="rgba(122,198,53,0.08)"/>
+      <circle cx="100" cy="100" r="20" fill="rgba(122,198,53,0.15)" stroke="rgba(122,198,53,0.3)" stroke-width="2"/>
+      <path d="M92 95 A12 12 0 0 1 108 95 L112 88 M108 105 A12 12 0 0 1 92 105 L88 112 M100 88 L100 82 M100 118 L100 112" stroke="rgba(122,198,53,0.5)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="about-hero-content reveal">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      📚 Tugas Besar Mata Kuliah Aplikasi Pembelajaran Mesin
+    </div>
+    <h1 class="page-title">Tentang <span class="title-lime">SampahPedia</span></h1>
+    <p class="page-subtitle">Sistem klasifikasi sampah berbasis kecerdasan buatan</p>
+    <div class="hero-group-badge">👥 Kelompok 6</div>
+  </div>
+</section>
+
+<!-- PROJECT INFO -->
+<section class="about-section bg-cream">
+  <div class="about-container">
+
+    <!-- Research Card -->
+    <div class="research-card reveal">
+      <div class="research-card-accent"></div>
+      <div class="research-card-body">
+        <div class="research-icon">🎓</div>
+        <div class="research-content">
+          <span class="research-label">Judul Tugas Besar</span>
+          <h2 class="research-title">
+            Pengembangan Sistem Klasifikasi Jenis Sampah Menggunakan Convolutional Neural Network Berbasis Web untuk Mendukung Proses Pemilahan Sampah pada Bank Sampah Panca Daya 3 Padang
+          </h2>
+          <div class="institution-badge">
+            <span class="inst-dot">🏛️</span>
+            Bank Sampah Panca Daya 3 · Padang, Sumatera Barat
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATASET SECTION -->
+    <div class="dataset-section reveal">
+      <div class="dataset-header">
+        <h2 class="section-title dark">📊 Dataset yang Digunakan</h2>
+      </div>
+      <div class="dataset-card">
+        <div class="dataset-source">
+          <div class="source-info">
+            <span class="source-platform">Kaggle Dataset</span>
+            <h3 class="source-name">Garbage Classification Dataset</h3>
+            <a href="https://www.kaggle.com/datasets/ionutandreivaduva/garbage-classification" target="_blank" class="source-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              ionutandreivaduva/garbage-classification
+            </a>
+          </div>
+          <div class="source-badge-wrap">
+            <span class="source-badge">4 Kelas</span>
+            <span class="source-badge green">CNN Ready</span>
+          </div>
+        </div>
+        <div class="dataset-grid">
+          <div class="dataset-cat-card" style="--dc:#06B6D4">
+            <div class="dc-icon">🍾</div>
+            <div class="dc-info">
+              <span class="dc-orig">Vidrio</span>
+              <span class="dc-idn">Sampah Kaca</span>
+            </div>
+          </div>
+          <div class="dataset-cat-card" style="--dc:#3B82F6">
+            <div class="dc-icon">🧴</div>
+            <div class="dc-info">
+              <span class="dc-orig">Plastico</span>
+              <span class="dc-idn">Sampah Plastik</span>
+            </div>
+          </div>
+          <div class="dataset-cat-card" style="--dc:#6B7280">
+            <div class="dc-icon">🥫</div>
+            <div class="dc-info">
+              <span class="dc-orig">Metal</span>
+              <span class="dc-idn">Sampah Logam</span>
+            </div>
+          </div>
+          <div class="dataset-cat-card" style="--dc:#F59E0B">
+            <div class="dc-icon">📦</div>
+            <div class="dc-info">
+              <span class="dc-orig">Carton</span>
+              <span class="dc-idn">Sampah Kardus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="tech-section reveal">
+      <h2 class="section-title dark" style="text-align:center;margin-bottom:40px">🛠️ Teknologi yang Digunakan</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon-wrap" style="background:rgba(59,130,246,.1)">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M4 4h24v24H4z" fill="rgba(59,130,246,.2)" rx="4"/>
+              <text x="16" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#3B82F6" font-family="monospace">Py</text>
+            </svg>
+          </div>
+          <h3 class="tech-name">Python</h3>
+          <p class="tech-desc">Bahasa pemrograman utama untuk pengembangan model AI</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon-wrap" style="background:rgba(255,111,0,.1)">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" fill="rgba(255,111,0,.2)"/>
+              <text x="16" y="21" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF6F00" font-family="monospace">TF</text>
+            </svg>
+          </div>
+          <h3 class="tech-name">TensorFlow / Keras</h3>
+          <p class="tech-desc">Framework deep learning untuk membangun dan melatih model CNN</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon-wrap" style="background:rgba(122,198,53,.1)">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="4" width="24" height="24" rx="4" fill="rgba(122,198,53,.2)"/>
+              <text x="16" y="22" text-anchor="middle" font-size="10" font-weight="bold" fill="#1A6B3A" font-family="monospace">CNN</text>
+            </svg>
+          </div>
+          <h3 class="tech-name">CNN Architecture</h3>
+          <p class="tech-desc">Arsitektur Convolutional Neural Network untuk klasifikasi gambar</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon-wrap" style="background:rgba(15,23,42,.08)">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" fill="rgba(15,23,42,.15)"/>
+              <text x="16" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#1C1C1C" font-family="monospace">Fl</text>
+            </svg>
+          </div>
+          <h3 class="tech-name">Flask</h3>
+          <p class="tech-desc">Web framework Python ringan untuk API backend inference model</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon-wrap" style="background:rgba(245,166,35,.1)">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="4" width="24" height="24" rx="4" fill="rgba(245,166,35,.2)"/>
+              <text x="16" y="22" text-anchor="middle" font-size="9" font-weight="bold" fill="#D97706" font-family="monospace">Web</text>
+            </svg>
+          </div>
+          <h3 class="tech-name">HTML / CSS / JS</h3>
+          <p class="tech-desc">Frontend web interaktif dengan desain modern dan responsif</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="team-section">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag lime">Tim Kami</span>
+      <h2 class="section-title light">Anggota Kelompok 6</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img src="images/team/loly.jpeg" alt="Foto Loly Amelia Nurza" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <span>👤</span>
+          </div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Loly Amelia Nurza</h3>
+          <p class="team-nim">NIM. 2311521016</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img src="images/team/sherly.jpeg" alt="Foto Sherly Ayuma Putri" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <span>👤</span>
+          </div>
+
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Sherly Ayuma Putri</h3>
+          <p class="team-nim">NIM. 2311521018</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img src="images/team/shidiq.jpeg" alt="Foto Hasbi Ash Shiddiqi" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <span>👤</span>
+          </div>
+
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Hasbi Ash Shiddiqi</h3>
+          <p class="team-nim">NIM. 2311523014</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-photo-wrap">
+          <img src="images/team/alfi.jpeg" alt="Foto Alfi Zikri" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-photo-placeholder" style="display:none">
+            <span>👤</span>
+          </div>
+
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Alfi Zikri</h3>
+          <p class="team-nim">NIM. 2411521002</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MISSION SECTION -->
+<section class="mission-section">
+  <div class="mission-bg">
+    <div class="orb orb-1"></div>
+    <div class="dot-grid"></div>
+  </div>
+  <div class="mission-content reveal">
+    <div class="quote-mark quote-open">"</div>
+    <blockquote class="mission-quote">
+      Mendukung pengelolaan sampah yang lebih baik melalui teknologi AI untuk lingkungan Padang yang lebih bersih dan berkelanjutan.
+    </blockquote>
+    <div class="quote-mark quote-close">"</div>
+    <div class="mission-meta">
+      <span class="mission-app">SampahPedia</span>
+      <span class="mission-org">Bank Sampah Panca Daya 3 Padang</span>
+    </div>
+    <a href="deteksi.html" class="btn-primary" style="margin-top:36px;display:inline-flex">
+      Mulai Deteksi Sekarang →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo footer-logo">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="17" fill="rgba(122,198,53,0.15)" stroke="#7CC635" stroke-width="1.5"/>
+          <path d="M18 8C18 8 12 10 10 15C8 20 11 24 15 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 8C18 8 24 10 26 15C28 20 25 24 21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round"/>
+          <path d="M15 25L18 28L21 25" stroke="#7CC635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="18" cy="18" r="3" fill="#7CC635" opacity="0.8"/>
+        </svg>
+        <span class="logo-text"><span class="logo-sampah">Sampah</span><span class="logo-pedia">Pedia</span></span>
+      </a>
+      <p class="footer-tagline">Pilah Cerdas, Bumi Bersih</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html" class="footer-link">Beranda</a>
+      <a href="deteksi.html" class="footer-link">Deteksi</a>
+      <a href="about.html" class="footer-link">About Us</a>
+    </nav>
+    <p class="footer-copy">© 2026 SampahPedia · Bank Sampah Panca Daya 3 Padang</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
